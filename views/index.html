@@ -2,13 +2,7 @@
 
 {% block content %}
 
-<aside>
-    <div class="timeline"></div>
-    <div class="scroll-indicator">
-        <img src="img/scroll.svg" alt="Scroll naar beneden voor meer straten">
-        Scroll naar beneden om meer straten te laden
-    </div>
-</aside>
+{% include "components/_sidebar.html" %}
 
 <main id="map"></main>
 
@@ -21,11 +15,6 @@
 
 <div class="preloader">
     <img src="img/loader.svg" alt="Loading...">
-</div>
-
-<div class="landscape-only">
-    <img src="img/rotate-phone.svg">
-    Please rotate your phone
 </div>
 
 {% endblock %}
