@@ -1,14 +1,11 @@
 # performance-matters-server-side
 
-## Install
-To install all dependencies run:  
-```npm install```
+## Set up
+1. ```npm install```  
+2. ```gulp```  
 
-## Run express
-To run express run:  
-```node app.js```
+## Run project
+To check out the project run:  
 
-The server is now available at:  
-[127.0.0.1:8000](127.0.0.1:8000) or [localhost:8000](localhost:8000) 
-
-
+1. ```gulp express```
+2. Open [127.0.0.1:8000](127.0.0.1:8000) or [localhost:8000](localhost:8000)   

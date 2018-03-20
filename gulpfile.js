@@ -32,7 +32,7 @@ gulp.task('jsDeps', function () {
         .pipe(gulp.dest('./assets/js'));
 })
 
-gulp.task('develop', function () {
+gulp.task('express', function () {
     const stream = nodemon({ script: 'app.js',
         ext: 'html js css scss',
         ignore: ['ignored.js']
@@ -51,4 +51,5 @@ gulp.task('sass:watch', function () {
     gulp.watch('./assets/scss/**/*.scss', ['sass'])
 })
 
-gulp.task('default', ['sass']);
+gulp.task('deps', ['jsDeps', 'cssDeps']);
+gulp.task('default', ['sass', 'deps']);
