@@ -7,6 +7,8 @@ nunjucks.configure('views', {
     express: app
 })
 
+app.use(express.static(__dirname + '/assets'))
+
 app.get('/', function(req, res) {
     res.render('index.html')
 })
