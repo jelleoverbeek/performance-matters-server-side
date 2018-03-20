@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jelleoverbeek/performance-matters-server-side#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "nunjucks": "^3.1.2"
   }
 }
