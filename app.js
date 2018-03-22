@@ -3,10 +3,11 @@ const app = express()
 const nunjucks = require('nunjucks')
 const request = require('request')
 const parseJson = require('parse-json')
+const sass = require('node-sass');
 
 const api = {
     streets: [],
-    sparqlQuery : `
+    sparqlQuery: `
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             PREFIX hg: <http://rdf.histograph.io/>
@@ -72,6 +73,7 @@ nunjucks.configure('views', {
 })
 
 app.use(express.static(__dirname + '/assets'))
+
 
 app.get('/', function(req, res) {
     res.render('index.html', {
