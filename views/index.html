@@ -2,15 +2,23 @@
 
 {% block content %}
 
-{% include "components/_sidebar.html" %}
 
-<main id="map"></main>
-
-<div class="controls">
-    <button id="play">
-        <img src="img/play.svg" alt="Play button">
-    </button>
-    <button id="pause" class="hidden"><img src="img/pause.svg" alt="pause button"></button>
-</div>
+    <section>
+        <div class="timeline">
+            {% for year in streets %}
+            <div class="timeline-part year-${year}">
+                <div class="timeline-graph"></div>
+                <div class="timeline-meta">
+                    <h3 class="year">{{ year.year }} - {{ year.streets|length }} {% if year.streets|length > 1 %} Straten{% else %} straat{% endif %}</h3>
+                    <ul class="streets">
+                        {% for street in year.streets %}
+                        <li>{{ street }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
 
 {% endblock %}
