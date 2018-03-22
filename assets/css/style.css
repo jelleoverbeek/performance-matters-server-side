@@ -66,6 +66,7 @@ section {
 
 .timeline {
     padding: 1.5em;
+    min-width: 14em;
 }
 
 .timeline-part {
@@ -149,7 +150,7 @@ section {
 }
 
 .streets.toggled {
-    max-height: initial;
+    max-height: none;
 }
 
 .streets.toggled::after {
