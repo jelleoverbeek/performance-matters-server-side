@@ -18,10 +18,10 @@ module.exports = {
         var lists = document.querySelectorAll(".streets");
         var _this = this;
 
-        lists.forEach(function(list) {
-            list.addEventListener("click", function (event) {
+        for (var i = 0; i < lists.length; i++) {
+            lists[i].addEventListener("click", function () {
                 _this.toggle(this);
             })
-        });
+        }
     }
 };
