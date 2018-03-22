@@ -1,5 +1,21 @@
 <aside>
-    <div class="timeline"></div>
+
+    <div class="timeline">
+        {% for year in streets %}
+        <div class="timeline-part year-${year}">
+            <div class="timeline-graph"></div>
+            <div class="timeline-meta">
+                <h3 class="year">{{ year.year }}</h3>
+                <ul class="streets">
+                    {% for street in year.streets %}
+                    <li>{{ street }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
     <div class="scroll-indicator">
         <img src="img/scroll.svg" alt="Scroll naar beneden voor meer straten">
         Scroll naar beneden om meer straten te laden
