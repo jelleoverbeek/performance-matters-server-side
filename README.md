@@ -6,7 +6,7 @@ All the JavaScript functionality is removed in this version.
 
 ## Set up
 1. Install deps: ```npm install```
-2. Bundle all the JS: ```browserify main.js -o assets/js/bundle.js```
+2. Bundle all the (currently unused) JS: ```browserify main.js -o assets/js/bundle.js```
     
 
 ## Run project
