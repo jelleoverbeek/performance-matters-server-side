@@ -6,7 +6,7 @@
     <section>
         <div class="timeline">
             {% for year in streets %}
-            <div class="timeline-part year-${year}">
+            <div class="timeline-part year-{{ year.year }}">
                 <div class="timeline-graph"></div>
                 <div class="timeline-meta">
                     <h3 class="year">{{ year.year }} - {{ year.streets|length }} {% if year.streets|length > 1 %} Straten{% else %} straat{% endif %}</h3>

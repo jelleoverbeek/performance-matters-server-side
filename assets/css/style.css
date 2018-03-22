@@ -4,6 +4,7 @@
 }
 
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -21,25 +22,27 @@ body {
 
 h1 {
     text-align: center;
-    margin: 3rem 0 0 0;
+    margin: 3em 0 0 0;
 }
 
 h3 {
-    font-size: 1.125rem;
+    font-size: 1.125em;
     margin: 0;
+    -webkit-transition: all ease-in-out 0.5s;
+    -o-transition: all ease-in-out 0.5s;
     transition: all ease-in-out 0.5s;
 }
 
 p {
     margin: 0;
-    font-size: 0.9375rem;
+    font-size: 0.9375em;
     color: #797979;
 }
 
 aside {
     position: relative;
     width: 20vw;
-    min-width: 20rem;
+    min-width: 20em;
     height: 100vh;
     background-color: #fff;
     overflow: auto;
@@ -52,31 +55,49 @@ main {
 }
 
 section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 100%;
 }
 
 .timeline {
-    padding: 1.5rem;
+    padding: 1.5em;
+    min-width: 14em;
 }
 
 .timeline-part {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .timeline-meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
-    padding-top: 1.5rem;
+    padding-top: 1.5em;
 }
 
 .timeline-graph {
-    max-width: 5rem;
-    min-height: 5rem;
+    max-width: 5em;
+    min-height: 5em;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     background: url("../img/timeline-mid.svg") 24px top no-repeat, url("../img/timeline-line.svg") 24px top repeat-y;
 }
@@ -109,10 +130,27 @@ section {
     list-style: none;
     margin: 0;
     padding-left: 0;
+    max-height: 3.5em;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.streets::after {
+    position: absolute;
+    content: " ";
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 1.8em;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.76)));
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.76) 100%);
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.76) 100%);
+    background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.76) 100%);
 }
 
 .streets.toggled {
-    max-height: initial;
+    max-height: none;
 }
 
 .streets.toggled::after {
@@ -121,29 +159,36 @@ section {
 
 li {
     margin: 0;
-    font-size: 0.9375rem;
+    font-size: 0.9375em;
     color: #797979;
 }
 
 .controls {
     position: fixed;
-    top: 1.5rem;
-    right: 1.5rem;
+    top: 1.5em;
+    right: 1.5em;
     z-index: 1000;
 }
 
 button {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     font-weight: 600;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     background: var(--color-red);
     border-radius: 3px;
     border: none;
-    font-size: 1rem;
+    font-size: 1em;
     color: #fff;
+    -webkit-box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.12);
     box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.12);
-    padding: 0.5rem;
+    padding: 0.5em;
     width: 100%;
     cursor: pointer;
 }
@@ -153,21 +198,28 @@ button:hover {
 }
 
 .scroll-indicator {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     color: var(--color-red);
     bottom: 0;
     position: absolute;
-    padding: 2rem;
+    padding: 2em;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(white));
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, white 100%);
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, white 100%);
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, white 100%);
+    -webkit-transition: all ease-in-out 1s;
+    -o-transition: all ease-in-out 1s;
     transition: all ease-in-out 1s;
 }
 
 .scroll-indicator img {
-    margin-right: 1rem;
+    margin-right: 1em;
 }
 
 .slide-out {
-    bottom: -6.25rem;
+    bottom: -6.25em;
     opacity: 0;
 }
 
@@ -175,8 +227,13 @@ button:hover {
     position: fixed;
     width: 100vw;
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-line-pack: center;
     align-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     left: 0;
     right: 0;
@@ -198,8 +255,15 @@ button:hover {
     bottom: 0;
     z-index: 1001;
     background: #fff;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color: var(--color-red);
     font-weight: 600;
@@ -207,11 +271,13 @@ button:hover {
 }
 
 .landscape-only img {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
 }
 
-@media screen and (orientation: portrait) and (max-width: 37.5rem) {
+@media screen and (orientation: portrait) and (max-width: 37.5em) {
     .landscape-only {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 }

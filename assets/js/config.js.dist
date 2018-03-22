@@ -1,3 +1,0 @@
-const config = {
-    mapbox_key: "INSERT_KEY_HERE"
-};
