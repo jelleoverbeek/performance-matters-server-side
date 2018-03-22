@@ -82,6 +82,12 @@ app.get('/', function(req, res) {
 })
 
 app.listen(8000, function () {
+
+    setInterval(function(){
+        console.log('Refreshing data')
+        api.getData()
+    }, 1000*60*60*12); // Refresh data twice a day
+
     api.init();
     console.log('Listening on port 8000!')
 })
