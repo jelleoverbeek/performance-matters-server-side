@@ -1,8 +1,9 @@
 # performance-matters-server-side
 
 ## Set up
-1. ```npm install```  
-2. ```gulp```  
+1. Install deps: ```npm install```
+2. Bundel js: ```browserify main.js -o assets/js/bundle.js```
+    
 
 ## Run project
 To check out the project run:  
