@@ -1,6 +1,6 @@
-const toggle = require('./toggle')
+var toggle = require('./toggle')
 
-const app = {
+var app = {
     init: function () {
         toggle.init();
     }
