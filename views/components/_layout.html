@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="manifest.json" rel="manifest">
 </head>
 <body>
 
@@ -13,5 +14,10 @@
 {% endblock %}
 
 <script src="js/bundle.js"></script>
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+    }
+</script>
 </body>
 </html>

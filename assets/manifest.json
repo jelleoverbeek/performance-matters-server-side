@@ -1,0 +1,10 @@
+{
+  "name": "Straten van Amsterdam per jaar",
+  "short_name": "Straten van Amsterdam",
+  "description": null,
+  "display": "standalone",
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#FF4343",
+  "icons": []
+}
