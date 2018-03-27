@@ -5,21 +5,26 @@ All the JavaScript functionality is removed in this version.
 ![Screenshot of the app](https://d.pr/i/fb8J7c+ "Screenshot of the app")
 
 ## Set up
-1. Clone repository:
+**Clone repository:**
 ```
 git clone git@github.com:jelleoverbeek/performance-matters-server-side.git
 ```
-2. Install dependencies:
+
+**Install dependencies:**
 ```
 npm install
 ```
 
-3. Build and start server:
+**Compiling assets**  
+- Bundle and minify js: ```npm run browserify```  
+- Minify css: ```npm run uglifycss```
+
+**Build and start server:**
 ```
 npm run start
 ```
-    
-4. Open [127.0.0.1:8000](127.0.0.1:8000) or [localhost:8000](localhost:8000) in your browser to checkout the app.
+   
+Open [127.0.0.1:8000](127.0.0.1:8000) or [localhost:8000](localhost:8000) in your browser to checkout the app.
 
 
 ## Speed comparison
