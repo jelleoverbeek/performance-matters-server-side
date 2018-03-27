@@ -5,7 +5,7 @@ self.addEventListener('install', event => event.waitUntil(
         .then(cache => cache.addAll([
             'manifest.json',
             'sw.js',
-            '/css/style.css',
+            '/css/style-min.css',
             '/js/bundle.js',
             '/img/timeline-line.svg',
             '/img/timeline-end.svg',
