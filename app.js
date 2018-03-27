@@ -3,7 +3,8 @@ const app = express()
 const nunjucks = require('nunjucks')
 const request = require('request')
 const parseJson = require('parse-json')
-const sass = require('node-sass');
+const sass = require('node-sass')
+const compression = require('compression')
 
 const api = {
     streets: [],
@@ -74,7 +75,7 @@ nunjucks.configure('views', {
 })
 
 app.use(express.static(__dirname + '/assets'))
-
+app.use(compression());
 
 app.get('/', function(req, res) {
     res.render('index.html', {
