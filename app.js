@@ -69,7 +69,8 @@ const api = {
 
 nunjucks.configure('views', {
     autoescape: true,
-    express: app
+    express: app,
+    watch: true
 })
 
 app.use(express.static(__dirname + '/assets'))
