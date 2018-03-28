@@ -74,8 +74,8 @@ nunjucks.configure('views', {
     watch: true
 })
 
-app.use(express.static(__dirname + '/assets'))
 app.use(compression());
+app.use(express.static(__dirname + '/assets'))
 
 app.get('/', function(req, res) {
     res.render('index.html', {

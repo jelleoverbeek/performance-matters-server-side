@@ -64,6 +64,12 @@ section {
     width: 100%;
 }
 
+.offline {
+    padding: 1em;
+    text-align: center;
+    color: #bb0000;
+}
+
 .timeline {
     padding: 1.5em;
     min-width: 14em;
@@ -130,6 +136,9 @@ section {
     list-style: none;
     margin: 0;
     padding-left: 0;
+}
+
+.collapsed {
     max-height: 3.5em;
     overflow: hidden;
     cursor: pointer;
