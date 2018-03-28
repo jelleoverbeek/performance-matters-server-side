@@ -64,6 +64,12 @@ section {
     width: 100%;
 }
 
+.offline {
+    padding: 1em;
+    text-align: center;
+    color: #bb0000;
+}
+
 .timeline {
     padding: 1.5em;
     min-width: 14em;
